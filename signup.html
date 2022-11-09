@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norrköpings Tennis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+
+
+<body>
+
+
+<!--    LOGO PART OF THE PAGE GOES HERE, DO NOT CHANGE ANYTHING-->
+<header>
+    <div class="top">
+
+
+        <a href="index.html"><img src="images/Racket_White_Logo.png" alt="Welcome to the 'RacketStadio'n'"
+                                  width="20%"
+                                  height="70%" class="logo"></a>
+
+
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="facilities.html" target="_self">Facilities</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+<!-- THE BODY OF THE PAGE BEGINS HERE! -->
+
+<main>
+    <!-- LEFT SECTION HERE -->
+    <section class="main">
+        <div class="grow1">
+            <h4>Signup Accepted!</h4>
+            <p>
+                <!--            TODO: Setup the MongoDB to take signups and save to the mongo.txt -->
+            <div id="signup"></div>
+            <script>
+                const signupList = document.getElementById('signup')
+                new URLSearchParams(window.location.search).forEach((value,
+                                                                     name) => {
+                    signupList.append(`${name}: ${value}`)
+                    signupList.append(document.createElement('br'))
+                })
+            </script>
+            <br>
+            You will be contacted in less then 48hrs to confirm your place in a beginners group.
+            </p>
+        </div>
+        <!--RIGHT SECTION HERE -->
+        <div class="grow1">
+            <h4>Starting Gear</h4>
+            <P>
+                We would like to remind you that there are some starting gear required for this course.
+                You will need a pair of sneakers, preferably with good grip, but no duds on.
+                Secondly you will need a tennis racket that fits your size.
+                If you do not have a racket, you can rent one from us for the low price of 2$ per session.
+                Showers, pool and sauna are open at all hours for course attendants.
+
+            </P>
+            <P>
+            <ul class="checklist">
+                <li>Shoes</li>
+                <li>Racket</li>
+                <li>Waterbottle</li>
+                <li>Appropriate Clothes</li>
+                <li>Towel
+                <li>Balls</li>
+
+
+            </ul>
+
+            </P>
+        </div>
+    </section>
+
+
+</main>
+</body>
+</html>

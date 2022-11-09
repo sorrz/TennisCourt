@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norrköpings Tennis - Contact Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+
+
+<body>
+
+
+<!--    LOGO PART OF THE PAGE GOES HERE, DO NOT CHANGE ANYTHING-->
+<header>
+    <div class="top">
+
+        <a href="index.html"><img src="images/Racket_White_Logo.png" alt="Welcome to the 'RacketStadio'n'"
+                                  width="20%"
+                                  height="70%" class="logo"></a>
+
+
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="facilities.html" target="_self">Facilities</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+<!-- THE BODY OF THE PAGE BEGINS HERE! -->
+
+<main>
+    <!--LEFT SECTION HERE -->
+    <section class="main">
+        <div class="grow1">
+            <h4>MAIL US YOUR QUESTION</h4>
+            <br><br><br>
+            <!--            TODO: Setup the SMTP Send JS to Send the mail Containing the info below -->
+            <div class="contact">
+                <form class="form">
+                    <input class="contact" type="name" id="name" name="name" placeholder="Your Name" required>
+                    <input class="contact" type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input class="contact" type="phone" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{6}"
+                           placeholder="07xx-xxxxxx" required>
+                    <textarea class="contact" id="message" name="message" rows="10" cols="0"
+                              placeholder="Your Message here!" required></textarea>
+                    <button class="send" type="send">Send!</button>
+                </form>
+            </div>
+
+
+        </div>
+        <!--RIGHT SECTION HERE -->
+
+        <div class="grow1">
+            <h4>VISIT US</h4>
+
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="600" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=Racketstadion,%20Norrk%C3%B6ping&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+</body>
+</html>

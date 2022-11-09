@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <title>Norrköpings Tennis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+
+    <!--    FOR CAL FUNCTION -->
+    <link href='cal/lib/main.css' rel='stylesheet'/>
+    <script src='cal/lib/main.js'></script>
+
+    <!--            TESTING CAL FUNCTION HERE -->
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!--    LOGO PART OF THE PAGE GOES HERE, DO NOT CHANGE ANYTHING-->
+<header>
+    <div class="top">
+
+
+        <a href="index.html"><img src="images/Racket_White_Logo.png" alt="Welcome to the 'RacketStadio'n'"
+                                  width="20%"
+                                  height="70%" class="logo"></a>
+
+
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="facilities.html" target="_self">Facilities</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+</header>
+
+
+<!-- THE BODY OF THE PAGE BEGINS HERE! -->
+
+<main>
+    <!--  LEFT SECTION OF THE PAGE -->
+    <section class="main">
+
+        <div class="grow1">
+            <h4>Book a course, the sauna or the pools here</h4>
+            <p>
+            <div class="calendar">
+
+
+                <div id="calendar">
+
+                </div>
+
+
+            </div>
+            </p>
+        </div>
+
+        <!--RIGHT SECTION OF THE PAGE -->
+
+        <div class="grow1">
+            <h4>Signup for our start courses!</h4>
+            <!-- TODO: Write the JS for Send Mail and post Request -->
+            <p>
+            <div class="flashcard">
+                <!--                FORM FOR SIGNUP -->
+                <span id="title"><h5>Sign Up to the Beginners Course</h5></span>
+                <div id="advice-card-media">
+                    <img src="images/beginners.jpg" alt="Sign Up to the Beginners Course" height="106" width="160">
+                </div>
+                <div class="contact">
+                    <p>
+                    <form action="signup.html" method="get">
+                        <div>
+                            <label for="fname">First Name:</label>
+                            <input class="contact" type="text" name="firstname" id="fname" placeholder="John" required>
+                        </div>
+                        <div>
+                            <label for="sname">Surname:</label>
+                            <input class="contact" type="text" name="surname" id="sname" placeholder="Doe" required>
+                        </div>
+                        <div>
+                            <label for="mail">Email:</label>
+                            <input class="contact" type="email" name="mail" id="mail" placeholder="john.doe@gmail.com"
+                                   required>
+                        </div>
+                        <div>
+                            <label for="age">Age (min age 7, groups for each 10+ Years):</label>
+                            <input class="contact" type="number" name="age" id="age" value="age" placeholder="1" min="7"
+                                   max="100" required>
+                        </div>
+                        <br>
+                        <input class="send" type="submit">
+
+                    </form>
+                    </p>
+
+
+                </div>
+
+            </div>
+            </p>
+            <!--            TODO: Change to actual content -->
+            <P>
+                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+
+
+                embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
+                predefined chunks as necessary, making this the first true generator on the Internet. It uses a
+                dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate
+                Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                injected humour, or non-characteristic words etc.
+            </P>
+        </div>
+
+
+    </section>
+
+
+</main>
+</body>
+</html>

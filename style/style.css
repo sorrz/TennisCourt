@@ -1,0 +1,251 @@
+
+/*Setting Variables for Color Palette */
+
+:root {
+    --minion-yellow: hsla(52, 100%, 65%, 1);
+    --fiery-rose: hsla(356, 100%, 67%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --lapis-lazuli: hsla(211, 43%, 38%, 1);
+    --blue-jeans: hsla(206, 100%, 60%, 0.1);
+}
+
+
+
+
+
+/*General Styling of normal objects*/
+body {
+    background-color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+
+}
+h4{
+    text-transform: uppercase;
+    color: var(--minion-yellow);
+}
+h5{
+    text-transform: uppercase;
+}
+.checklist
+{
+    list-style-type: none;
+}
+.checklist li::before {
+    color: transparent;
+    font-size: 1px;
+    content: " ";
+    margin-left: -15em;
+    margin-right: 15px;
+    padding: 10px;
+    background-color: orange;
+    -webkit-mask-image: url(../images/checkbox.png);
+    -webkit-mask-size: cover;
+}
+
+
+/*Styling for the header and Nav items*/
+.top {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+header {
+    background: var(--lapis-lazuli);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+header::after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+
+.logo {
+    float: left;
+    padding: 25px 0;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    spacing: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 20px;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--fiery-rose);
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--minion-yellow);
+
+
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    top: 0;
+    background-color: var(--minion-yellow);
+    position: absolute;
+    transition: all 200ms ease-in-out;
+
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+/*BODY CODE HERE*/
+
+main {
+    grid-area: main;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    gap: 16px;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+.calendar {
+    width: inherit;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.calendar:hover {
+    background-color: var(--blue-jeans);
+    filter: drop-shadow(4px 6px 3px rgba(23, 23, 23, 0.4));
+}
+
+
+.grow1 {
+    flex-grow: 1;
+    min-width: 30%;
+    max-width: 50%;
+    background-color: var(--lapis-lazuli);
+    color: var(--white);
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px
+}
+
+
+.news {
+    text-decoration: none;
+    border-radius: 5px;
+}
+.flashcard {
+    padding: 5px;
+    spacing: 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.flashcard:hover {
+    background-color: var(--blue-jeans);
+    filter: drop-shadow(4px 6px 3px rgba(23, 23, 23, 0.4));
+    transition: ease-in-out 200ms;
+}
+.flashcard a {
+    text-decoration: none;
+    color: var(--fiery-rose);
+
+    font-weight: 300;
+}
+
+.flashcard a:hover {
+    color: var(--minion-yellow);
+
+
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 25px;
+    width: 65%;
+    border-radius: 10px;
+}
+.form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background-color: var(--white);
+
+}
+
+.send {
+    background-color: var(--fiery-rose);
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    padding: 10px 35px;
+    transition:  all 250ms ease-in-out;
+
+}
+.send:hover {
+    background-color: var(--minion-yellow);
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 35px;
+
+}
+
+/* FOR FUNCTIONALITY */
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: inherit;
+    width: inherit;
+    padding: 20px;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: inherit;
+    width: inherit;
+}
+
+/* Responsive for Mobile */
+
+@media screen and (max-width: 600px) {
+    .main {
+        display: block;
+        min-width: 90%;
+        alignment: center;
+        align-content: center;
+    }
+
+    .grow1 {
+        background-color: red;
+        min-width: inherit;
+        alignment: center;
+
+    }
+}
