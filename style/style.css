@@ -234,18 +234,18 @@ main {
 
 /* Responsive for Mobile */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 760px) {
     .main {
         display: block;
-        min-width: 90%;
-        alignment: center;
-        align-content: center;
+        /*background-color: green;*/
+        max-width: 100%;
+
     }
 
     .grow1 {
-        background-color: red;
-        min-width: inherit;
-        alignment: center;
+        /*background-color: red;*/
+        max-width: inherit;
+
 
     }
 }
