@@ -1,29 +1,25 @@
-# Testsite for HTML and Javascript Course
-### JaHt30
+### Testsite for HTML/CSS and Javascript Course
+#### JaHt30
 
-###### Task
+##### Task
 - Multipage
 - Responsive
-- Containing:
-- - Horizontal Menu
-- - Forms
-- - Javascript
-- - Multiple Booking Options
+- Containing:<br>
+->  Horizontal Menu<br>
+->  Forms<br>
+->  Javascript<br>
+->  Multiple Booking Options<br>
 
-#### Ideas
-* JS Calendar, block bokning.
-How do I do this, read up
+##### Ideas
+* BOOKING!<br>
+moved to TODO point 3
 
-
-* Setup a MongoDB, to hold the bookings
-and talk to the JS to display the correct
-block's that are available when booking.
-
-```
-3 banor
-1 bastu
-```
-
-* Is there a way to do the JS without Mongo?
-Can I save stuff in a CSV/Textfile and
+* DATABASE?<br>
+Is there a way to do the JS without Mongo?
+Can I save stuff in a CSV/Text file and
 skip the database?
+
+* TODO/FIXES!<br>
+[x] Non Sticky with Media Screen <br>
+[x] Re-size meny with Media Screen<br>
+[x] Booking System<br>

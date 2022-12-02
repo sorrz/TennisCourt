@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
+
+
 </head>
 
 
@@ -48,14 +49,14 @@
             <br><br><br>
             <!--            TODO: Setup the SMTP Send JS to Send the mail Containing the info below -->
             <div class="contact">
-                <form class="form">
+                <form class="form" id="contact-form">
                     <input class="contact" type="name" id="name" name="name" placeholder="Your Name" required>
                     <input class="contact" type="email" id="email" name="email" placeholder="Your Email" required>
                     <input class="contact" type="phone" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{6}"
                            placeholder="07xx-xxxxxx" required>
                     <textarea class="contact" id="message" name="message" rows="10" cols="0"
                               placeholder="Your Message here!" required></textarea>
-                    <button class="send" type="send">Send!</button>
+                    <button class="send" id="contact-send" >Send!</button>
                 </form>
             </div>
 
@@ -79,5 +80,7 @@
 
 
 </main>
+<script src="script/script.js"></script>
+<script src="script/signup.js"></script>
 </body>
 </html>

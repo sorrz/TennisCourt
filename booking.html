@@ -9,25 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
-    <script src="script/script.js"></script>
-
-    <!--    FOR CAL FUNCTION -->
-    <link href='cal/lib/main.css' rel='stylesheet'/>
-    <script src='cal/lib/main.js'></script>
-
-    <!--            TESTING CAL FUNCTION HERE -->
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        });
-
-    </script>
-
 </head>
 
 
@@ -66,23 +47,47 @@
 
         <div class="grow1">
             <h4>Book a course, the sauna or the pools here</h4>
-            <p>
-            <div class="calendar">
 
+            <div class="booking-form">
+                <br><br><br>
+                <form class="booking" id="booking" >
+                <input class="booking" type="date" id="date" name="date" onchange="checkAvailable()" required>
+                    <label for="times">Tillgängliga tider:</label>
+                    <select name="times" id="times" onchange="checkAvailable()">
+                        <option value="slot1">10-12</option>
+                        <option value="slot2">12-14</option>
+                        <option value="slot3">14-16</option>
+                        <option value="slot4">16-18</option>
 
-                <div id="calendar">
+                    </select>
+                    <label for="court">Tillgängliga bokningar:</label>
+                    <select name="court" id="court" onchange="checkAvailable()">
+                        <option value="court1">Bana 1 - Inne</option>
+                        <option value="court2">Bana 2 - Inne</option>
+                        <option value="court3">Bana 3 - Ute</option>
+                        <option value="court4">Bastu och Spa</option>
 
-                </div>
-
-
+                    </select>
+                    <input class="booking" type="name" id="gname" name="gname" onchange="checkAvailable()" placeholder="Your Name" required>
+                    <button class="send" id="contact-send" >Send!</button>
+                </form>
             </div>
-            </p>
+
+
+                <!--                NEW BOOKING FUNCTION -->
+            <listTimes />
+            <div class="feed-container" id="feed-container">
+                <!-- JS Data output here! -->
+            </div>
+
+
+
         </div>
 
         <!--RIGHT SECTION OF THE PAGE -->
 
         <div class="grow1">
-            <h4>Signup for our start courses!</h4>
+            <h4>Signup for our starter courses!</h4>
             <!-- TODO: Write the JS for Send Mail and post Request -->
             <p>
             <div class="flashcard">
@@ -113,7 +118,7 @@
                                    max="100" required>
                         </div>
                         <br>
-                        <input class="send" type="submit">
+                        <input class="submit" type="submit">
 
                     </form>
                     </p>
@@ -125,7 +130,7 @@
             </p>
             <!--            TODO: Change to actual content -->
             <P>
-                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
                 alteration in some form, by injected humour, or randomised words which don't look even slightly
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered
 
@@ -143,5 +148,7 @@
 
 
 </main>
+<script src="script/script.js"></script>
+<script src="script/handlers.js"></script>
 </body>
-</htm
+</html>
