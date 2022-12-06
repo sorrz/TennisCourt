@@ -61,10 +61,6 @@ function checkAvailable() {
 
 
 
-
-
-
-
 function createBooking(e) {
     e.preventDefault();
 
