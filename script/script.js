@@ -1,13 +1,27 @@
-const url = 'mongodb+srv://guest:dannesl123@cluster0.xkexe8b.mongodb.net/test';
+function listTimes() {
+    // Create divs for all bookable times
+    for (let i = 0; i < bookAble.length; i++) {
+        let current = bookAble[i];
+        console.log(current)
+        // Add Div's to the Feed
 
-const dbName = 'tennis'
-let db
+    }
+}
 
-MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
-    if (err) return console.log(err)
 
-    // Storing a reference to the database so you can use it later
-    db = client.db(dbName)
-    console.log(`Connected MongoDB: ${url}`)
-    console.log(`Database: ${dbName}`)
-})
+// Support Function to CreateElement
+function createElement(tag, className, text, parent) {
+    let element = document.createElement(tag);
+    element.className = className;
+    if (text != null) element.innerText = text;
+    if (parent != null) parent.appendChild(element);
+    return element;
+}
+
+// Display a date list of the coming week
+// When clicking on a day, list all the times that are 'bookAble'
+
+// When clicking a time connected to the day, prompt for the name, phone and mail of the user.
+// Assign ^ to the listing date+time
+
+// Pop to 'notBookAble' and CSS Style it to red when !empty.

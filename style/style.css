@@ -1,6 +1,5 @@
 
 /*Setting Variables for Color Palette */
-
 :root {
     --minion-yellow: hsla(52, 100%, 65%, 1);
     --fiery-rose: hsla(356, 100%, 67%, 1);
@@ -9,10 +8,6 @@
     --blue-jeans: hsla(206, 100%, 60%, 0.1);
 }
 
-
-
-
-
 /*General Styling of normal objects*/
 body {
     background-color: var(--white);
@@ -20,17 +15,20 @@ body {
     font-weight: 500;
 
 }
+
 h4{
     text-transform: uppercase;
     color: var(--minion-yellow);
 }
+
 h5{
     text-transform: uppercase;
 }
-.checklist
-{
+
+.checklist {
     list-style-type: none;
 }
+
 .checklist li::before {
     color: transparent;
     font-size: 1px;
@@ -42,7 +40,6 @@ h5{
     -webkit-mask-image: url(../images/checkbox.png);
     -webkit-mask-size: cover;
 }
-
 
 /*Styling for the header and Nav items*/
 .top {
@@ -116,8 +113,7 @@ nav a:hover::before {
     width: 100%;
 }
 
-/*BODY CODE HERE*/
-
+/*Styling for the body/main here*/
 main {
     grid-area: main;
 }
@@ -130,17 +126,17 @@ main {
     padding-left: 10%;
 }
 
-.calendar {
-    width: inherit;
-    padding: 20px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-}
-.calendar:hover {
-    background-color: var(--blue-jeans);
-    filter: drop-shadow(4px 6px 3px rgba(23, 23, 23, 0.4));
-}
+/*.calendar {*/
+/*    width: inherit;*/
+/*    padding: 20px;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    border-radius: 5px;*/
+/*}*/
+/*.calendar:hover {*/
+/*    background-color: var(--blue-jeans);*/
+/*    filter: drop-shadow(4px 6px 3px rgba(23, 23, 23, 0.4));*/
+/*}*/
 
 
 .grow1 {
@@ -155,22 +151,24 @@ main {
     border-radius: 5px
 }
 
-
 .news {
     text-decoration: none;
     border-radius: 5px;
 }
+
 .flashcard {
     padding: 5px;
     spacing: 2px;
     border-radius: 5px;
     padding: 10px;
 }
+
 .flashcard:hover {
     background-color: var(--blue-jeans);
     filter: drop-shadow(4px 6px 3px rgba(23, 23, 23, 0.4));
     transition: ease-in-out 200ms;
 }
+
 .flashcard a {
     text-decoration: none;
     color: var(--fiery-rose);
@@ -183,6 +181,7 @@ main {
 
 
 }
+
 .contact{
     display: flex;
     flex-direction: column;
@@ -190,13 +189,29 @@ main {
     width: 65%;
     border-radius: 10px;
 }
-.form input, form textarea{
-    border: 0;
+.booking{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 25px;
+    width: 65%;
+    border-radius: 10px;
+}
+
+form input, form textarea  {
     margin: 10px 0;
     padding: 20px;
     outline: none;
     background-color: var(--white);
+    border: none;
+}
 
+form select {
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    background-color: var(--white);
+    border: none;
 }
 
 .send {
@@ -208,6 +223,7 @@ main {
     transition:  all 250ms ease-in-out;
 
 }
+
 .send:hover {
     background-color: var(--minion-yellow);
     color: black;
@@ -217,7 +233,7 @@ main {
 
 }
 
-/* FOR FUNCTIONALITY */
+/* For map functionality */
 .mapouter {
     position: relative;
     text-align: right;
@@ -225,6 +241,7 @@ main {
     width: inherit;
     padding: 20px;
 }
+
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
@@ -233,7 +250,6 @@ main {
 }
 
 /* Responsive for Mobile */
-
 @media screen and (max-width: 760px) {
     .main {
         display: block;
@@ -248,4 +264,29 @@ main {
 
 
     }
+    header {
+        position: relative;
+        top: 0;
+        border-radius: 5px;
+        z-index: 1;
+        align-content: start;
+    }
+    .top nav ul li {
+        display: table-cell;
+    }
+    a {
+        font-size: 10px;
+    }
+    nav li {
+        /*display: inline-block;*/
+        margin-left: 20px;
+        padding-top: 0px;
+        position: relative;
+        padding-left: 5px;
+    }
+    .logo {
+        padding-top: 27px;
+    }
+
+
 }
